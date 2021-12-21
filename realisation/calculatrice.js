@@ -37,7 +37,7 @@ function ClickNumber(number){
 
 function Afficher(number){
 
-    var afficheur = document.getElementBbId("afficheur");
+    var afficheur = document.getElementById("afficheur");
     afficheur.value = "";
     
     if(a != undefined && b != undefined && operation != undefined){
@@ -80,7 +80,7 @@ function Init(){
     aString = undefined;
     bString = undefined;
     operation = undefined;
-    var afficheur = document.getElementBbId("afficheur");
+    var afficheur = document.getElementById("afficheur");
     
     afficheur.value = "";
 }
