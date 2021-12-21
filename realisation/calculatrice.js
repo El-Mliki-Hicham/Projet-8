@@ -22,7 +22,7 @@ function Calculer(a,b,operation){
 
 
 // Présentation
-function ClickNumber(number){
+function ClickSurnombre(number){
     if(a == undefined){
         if(aString == undefined) aString = '';
         aString += number;
