@@ -1,6 +1,6 @@
 // Variables
 var a,b,solution,operation;
-var aString, bString;
+var aChaineDecaracteres, bChaineDecaracteres;
 
 
 
@@ -24,12 +24,12 @@ function Calculer(a,b,operation){
 // Présentation
 function ClickSurnombre(number){
     if(a == undefined){
-        if(aString == undefined) aString = '';
-        aString += number;
+        if(aChaineDecaracteres == undefined) aChaineDecaracteres = '';
+        aChaineDecaracteres += number;
     } 
     else {
-        if(bString == undefined) bString = '';
-        bString += number;
+        if(bChaineDecaracteres == undefined) bChaineDecaracteres = '';
+        bChaineDecaracteres += number;
     } 
 
     Afficher();
@@ -44,12 +44,12 @@ function Afficher(number){
 
         afficheur.value = number;
     }else{
-        if(aString != undefined)
-        afficheur.value += aString 
+        if(aChaineDecaracteres != undefined)
+        afficheur.value += aChaineDecaracteres 
         if(operation != undefined)
             afficheur.value += operation     
-        if(bString != undefined)
-            afficheur.value += bString 
+        if(bChaineDecaracteres != undefined)
+            afficheur.value += bChaineDecaracteres 
 
         }
  
@@ -60,7 +60,7 @@ function Afficher(number){
 function Operation(operationParam){
     if(operation == undefined){
         operation = operationParam;
-        a = parseFloat(aString);
+        a = parseFloat(aChaineDecaracteres);
         Afficher();
     }else{
         alert("Vous avez déjà choisi l'opération " + operation);
@@ -69,7 +69,7 @@ function Operation(operationParam){
 
 function Egale(){
   
-    b = parseFloat(bString);
+    b = parseFloat(bChaineDecaracteres);
     solution = Calculer(a,b,operation);
     Afficher(solution);
 }
@@ -77,8 +77,8 @@ function Egale(){
 function Init(){
     a = undefined;
     b = undefined;
-    aString = undefined;
-    bString = undefined;
+    aChaineDecaracteres = undefined;
+    bChaineDecaracteres = undefined;
     operation = undefined;
     var afficheur = document.getElementById("afficheur");
     
