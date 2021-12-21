@@ -1,66 +1,68 @@
+var a,b,aString,bString,operation,resulta ;
 
-var a,b,aString,bString,resulta,operation;
+
 
 function oncklikNumbre(number) {
-    if(aString == undefined){aString=number}
-    else{ bString += number}
-    afficher()
-    
+if (aString == undefined)
+{aString = number }
+else {bString = number}     
+afficher()
 }
+
+
 
 
 function afficher(number) {
-    var afficher = document.getElementById("afficher")
-    afficher.value = ""
+var afficher = document.getElementById("afficher")
+afficher.value = ""
 
-    if (a != undefined && b != undefined && operation != undefined )
-    { afficher.value = number }
-else {
-if (aString != undefined ) { afficher.value += aString}
-if (operation != undefined ) { afficher.value += operation}
-if (bString != undefined ) { afficher.value += bString}
+if (a!=undefined && b!=undefined && operation !=undefined ) {afficher.value = number}
+else{
+if (aString != undefined) {afficher.value += aString }
+if (operation != undefined) {afficher.value += operation }
+if (bString != undefined) {afficher.value += bString }
 
-}
-}
-
-function Operation(operationParm) {
-
-    if ( operation== undefined)
-    {operation= operationParm}
- afficher()   
 
 }
+
+afficher()
+
+}
+
+function Operation(operationParam) {
+    if (operation == undefined ) 
+    {operation = operationParam}
+    afficher()
+}
+
+
+
+
+
 
 function egaLe() {
-    a= parseFloat(aString);
-    b= parseFloat(bString);
 
-resulta = caLcul(a,b,operation)
+a= parseFloat(aString)
+b= parseFloat(bString)
 
-afficher(resulta)
+var resulta = calcule(a,b,operation)
+
+afficher(resulta)    
 }
 
 
-function caLcul(a,b, operation) {
+function calcule(a,b,operation) {
+ resulta == undefined
+
+ switch (operation) {
+     case "+":
+         resulta = a+b
+         break;
  
- var resulta = undefined
- 
-switch (operation) {
-    case "+":
-        resulta = a+b
-        break;
-    case "-":
-        resulta = a-b
+     default:
+         break;
 
-        break;
+        }
 
-        case "*":
-        resulta = a*b
-
-        break;
-
-    default:
-        break;
-}
-return resulta
-}
+return resulta 
+    }
