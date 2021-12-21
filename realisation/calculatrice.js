@@ -102,3 +102,13 @@ afficher.value=""
 
     
 }
+
+// function onclickSuprime() {
+
+//     var afficher = document.getElementById("afficher")
+// afficher.value = ""
+//     if (aString != undefined) {   aString = undefined}
+//     // if (operation != undefined) {   afficher.value =operation}
+//     // if (bString != undefined) {   afficher.value =bString}
+
+// }
