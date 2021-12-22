@@ -1,39 +1,35 @@
-var a 
-var b 
-var aString
-var bString
-var operation
+var a,b,aString,bString,operation ,afficher ;
 
 
-
-
-
-
-
-function onclickNumbre(numbre) {
-    if (aString == undefined)
-    {aString = numbre}
-    else {bString = numbre}
-
+function onclickNumbre(number) {
+if(aString == undefined){aString = number}
+    else{bString = number  }
 afficher()
-
 }
 
 
+function afficher (number) {
 
-function afficher(numbre) {
-
-var afficher=document.getElementById("afficher")
-    if(a != undefined && b !=undefined && operation != undefined){afficher.value="" }
-
-else {
-
-if(aString != undefined){ afficher.value += aString}
-if(operation != undefined){ afficher.value += operation}
-if(bString != undefined){ afficher.value += bString}
-
-
-
-
+var afficher = document.getElementById("afficher") 
+afficher.value = ""
+if(a != undefined && b!= undefined && operation != undefined) {
+    afficher.value=number 
 }
+else{
+    if(aString != undefined){afficher.value += aString}
+    if(operation != undefined){afficher.value += operation}
+    if(bString != undefined){afficher.value += bString}
+   
+
+
+
+    }
+}
+
+function operaTion(operationParm) {
+
+       if( operation == undefined)
+       { operation = operationParm }
+            afficher()
+    
 }

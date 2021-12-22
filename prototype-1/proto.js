@@ -3,7 +3,7 @@ var bString
 var operation
 var a
 var b
-var total
+// var total
 
 function ClickSurnombre(number) {
 
@@ -40,13 +40,12 @@ function afficheur(number) {
 }
 
 
-// function Operation(operationParm) {
-//     if (operation == undefined) {
-//         operation = operationParm
-//     }
+function Operation(operationParm) {
+    if (operation == undefined)
+     {     operation = operationParm }
 
-//     afficheur()
-// }
+    afficheur()
+}
 
 // function Egale() {
 //     a = parseFloat(aString);
@@ -58,16 +57,18 @@ function afficheur(number) {
 
 // }
 
-// function calculate(aPara, bPara, operationPara) {
+// function calculate(a, b, operation) {
 //     var _total = undefined
 
-//     switch (operationPara) {
+//     switch (operation) {
 //         case "+":
-//             _total = aPara + bPara
+//             _total = a + b
+//             break;
+//          case "-" :
+//             _total = a-b 
 //             break;
 
-
-//         default:
+//         default:""
 //             break;
 //     }
 
