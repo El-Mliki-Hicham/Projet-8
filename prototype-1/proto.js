@@ -1,76 +1,61 @@
-var aString
-var bString
-var operation
-var a
-var b
-// var total
-
-function ClickSurnombre(number) {
+var a,b,aString,bString,operation ,afficher,resulta;
 
 
+function onclickNumbre(number) {
+if(aString == undefined)
+{aString = number}
+    else{bString = number  }
+afficher()
+}
+
+function afficher(number) {
+    var afficher = document.getElementById("afficher")
+    afficher.value= ""
+    
+
+    if(a != undefined && b != undefined && operation != undefined) 
+    {afficher.value = number}
+    else{
+if(aString != undefined){ afficher.value += aString}
+if(operation != undefined){ afficher.value += operation}
+if(bString != undefined){ afficher.value += bString}
 
 
-    if (aString == undefined) {
-        aString = number
-    } else {
-        bString = number
     }
-
-    afficheur()
+    
 }
 
-function afficheur(number) {
-    var afficheur = document.getElementById("afficheur")
-    afficheur.value = ''
 
-    if (a != undefined && b != undefined && operation != undefined) {
-        afficheur.value = number
-    } else {
-        if (aString != undefined) {
-            afficheur.value += aString
-        }
-        if (operation != undefined) {
-            afficheur.value += operation
-        }
-        if (bString != undefined) {
-            afficheur.value += bString
-        }
+function operaTion(operationParm) {
+
+     if( operation == undefined)
+       { operation = operationParm }
+
+    afficher()
+    
+}
+
+function egaLe() {
+
+a= parseFloat(aString);
+b= parseFloat(bString);
+
+resulta = calcul (a,b,operation)
+afficher(resulta)
+    
+}
+
+function calcul(a,b,operation) {
+
+    var _resulta=undefined
+    switch (operation) {
+        case "+":
+            _resulta= a+b
+            
+            break;
+    
+        default:
+            break;
     }
-
+return _resulta     
 }
-
-
-function Operation(operationParm) {
-    if (operation == undefined)
-     {     operation = operationParm }
-
-    afficheur()
-}
-
-// function Egale() {
-//     a = parseFloat(aString);
-//     b = parseFloat(bString);
-
-//     total = calculate(a, b, operation)
-
-//     afficheur(total)
-
-// }
-
-// function calculate(a, b, operation) {
-//     var _total = undefined
-
-//     switch (operation) {
-//         case "+":
-//             _total = a + b
-//             break;
-//          case "-" :
-//             _total = a-b 
-//             break;
-
-//         default:""
-//             break;
-//     }
-
-//     return _total
-// }
