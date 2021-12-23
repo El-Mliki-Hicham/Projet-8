@@ -69,16 +69,7 @@ return resulta
 
 
 
-    function suprime() {
-     
-     a= undefined
-     aString= undefined
-     bString= undefined
-     b= undefined
-     operation= undefined
-     var afficher = document.getElementById("afficher")
-     afficher.value =""
-    }
+    
 
 
 
