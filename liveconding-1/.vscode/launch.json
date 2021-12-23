@@ -5,10 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "file:///C:/Users/solicode/Desktop/github/Projet-8/liveconding/ex.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
+            "url": "file:///C:/Users/solicode/Desktop/github/Projet-8/liveconding/ex.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
