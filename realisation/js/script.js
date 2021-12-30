@@ -28,6 +28,7 @@ function afficher(number) {
 
     if (a != undefined && b != undefined && operation != undefined )
     { afficher.value = number }
+    
  else {
 if (aString != undefined ) { afficher.value += aString}
 if (operation != undefined ) { afficher.value += operation}
