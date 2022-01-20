@@ -31,7 +31,7 @@ function afficher(number) {
     
 function egaLe() {
 
-    a= parseFloat(aString)
+  a= parseFloat(aString)
     b= parseFloat(bString)
 
      resulta = calcul (a,b,operation )
@@ -48,6 +48,7 @@ function calcul (a,b,operation) {
    
        default:
            break;
-   }
+
+        }
    return resulta
 }
